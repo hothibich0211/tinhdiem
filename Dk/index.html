@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caudieukien</title>
+</head>
+<body>
+    <p> click the button to display a time-based greeting: </p>
+    <input type="number" name="" id="nhap">
+    <button onclick="myFunction()"> Try it</button>
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var number = document.getElementById("nhap").value;
+            var greeting;
+            if (number == 0){
+                greeting = "Bạn được 0 điểm:";
+            }
+            else if (number >0){
+                greeting = "Đó là số dương"
+            }
+
+            else
+            {
+                greeting = "Đây là số âm";
+            }
+            document.getElementById("demo").innerHTML =greeting;
+        }
+    </script>
+</body>
+</html>

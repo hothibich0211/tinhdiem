@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic</title>
+    
+</head>
+<body>
+    <div class="color-traffic">
+        <input type="button" name="" value="green" onclick="getGreenColor">
+        <input type="button" name="" value="yellow" onclick="getYellowColor">
+        <input type="button" name="" value="red" onclick="getRedColor">
+    </div>
+    <img src="./img/green.png" alt="" id="myImg">
+
+    <script>
+        function getGreenColor(){
+            document.getElementById("myImg").src ="./img/ green.png"
+        }
+
+        function getYellowColor(){
+            document.getElementById("myImg").src ="./img/ yellow.png"
+        }
+
+        function getRedColor(){
+            document.getElementById("myImg").src ="./img/ red.png"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Menu/css.css">
+    <title>Menu</title>
+</head>
+<body>
+    <form>
+        <h3>MENU</h3>
+        <p>Hãy Ghé Vào Đây </p> 
+        <p>Quý Khách Vui Lòng Chọn:</p>
+        Nước Ngọt:
+        <select id="sweet_drink"> </br> </br>
+            <option value="nuocsuoi">Stream Drink</option>
+            <option value="nuoccam">Orange Drink</option>
+            <option value="sting">Sting Drink</option>
+            <option value="pepsi">Pepsi Drink</option>
+            <option value="coca">CoCa Drink</option>
+            <option value="7up">7Up Drink</option>
+        </select>
+        Trái Cây:
+        <select id="fruit"> Trái Cây </br> </br>
+            <option value="grape">Grape</option>
+            <option value="orange">Orange</option>
+            <option value="grapefruit">Grapefruit</option>
+            <option value="coconut">Coconut</option>
+        </select>
+        </br> </br>
+        Số Tiền: 
+        <input type="number" id="money">  </br> </br>
+        <input type="button" onclick="functionOK()" value="Thanh Toán"> </br> </br>
+        <div> </br>
+            <button id="myBtn">Chúc Quý Khách Ngon Miệng</button>  </br> </br>
+            Tiền Còn Lại:
+            <input type="text" id="sum" value="">
+        </div>
+        <!-- <p id="demo"></p> -->
+    </form>
+    <script>
+       function functionOK(){
+            var drink=document.getElementById("sweet_drink");
+            var valuedrink=drink[drink.selectedIndex].value;
+            var Fruit=document.getElementById("fruit");
+            var valuefruit=Fruit[Fruit.selectedIndex].value;
+            var ketqua;
+            var tiennuoc;
+            var tientraicay;
+            switch(valuedrink){
+                case "nuocsuoi":tiennuoc=15000;
+                case "nuoccam":tiennuoc=20000;
+                case "sting":tiennuoc=15000;
+                case "pepsi":tiennuoc=10000;
+                case "coca":tiennuoc=5000;
+                case "7up":tiennuoc=10000;
+            }
+            switch(valuefruit){
+                case "grape":tientraicay=30000;
+                case "orange":tientraicay=15000;
+                case "grapefruit":tientraicay=20000;
+                case "coconut":tientraicay=10000;
+            }
+            if ()
+
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinhtongAvaB</title>
+</head>
+<body>
+    <p>A function is triggered when the user releases a key in . The function outputs the actual key/letter...</p>
+    <input type="text" name="" id="frist" onkeyup="myFunctin()" >
+    <input type="text" name="" id="second" onkeyup="myFunctin()">
+    <p>The name is: <span id="demo"></span></p>
+    <script>
+        function myFunctin(){
+            var x = parseInt(document.getElementById("frist")).value;
+            var y = parseInt(document.getElementById("second")).value;
+            document.getElementById("demo").innerHTML = x+y
+        }
+    </script>
+    
+</body>
+</html>

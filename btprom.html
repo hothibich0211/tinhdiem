@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+    <style>
+        /* #ketqua{
+            font-size: 30px;
+            color: red;
+            text-align: center;
+
+        } */
+        /* button{
+            background-color: greenyellow;
+            font-size: 20px;
+            
+        }
+        p{
+            text-align: center;
+            color: aqua;
+            font-size: large;
+        } */
+    </style>
+</head>
+<body>
+    <script language ="javascript" type="text/javascript">
+        function tinhtuoi(){
+        var date = new Date();
+        var nam = (prompt("Nhập năm sinh : "));
+        var thang = (prompt("Nhập tháng sinh: "));
+        var ngay = (prompt("Nhập ngày sinh: "));
+        var thu = date.getDay();
+        var tuoi = date.getFullYear()- nam;
+        alert("Bạn sinh vào ngày thứ : " + tuoi +" tuổi" +" sinh vào ngày thứ" + thu + " năm" +nam)
+        
+        }
+        alert(tinhtuoi())
+    </script>
+    <!-- <p>Click the button to demonstrate the prompt box.</p>
+    // <button onclick="myFunction()">Try it</button>
+    // <p id="demo"></p>
+    // <script>
+    //     function myFunction(){
+    //         var person = prompt("Plaese enter your name","Hary Potter")
+    //         if(person != null){
+    //             document.getElementById("demo").innerHTML = "Hello" + person + "! How are you today?";
+    //         }
+    //     }
+    // </script> 
+    <p id="ketqua"></p> -->
+    <!-- dung parseInt để chuyển qua -->
+    <!-- <script language="javascript">
+    //     alert("Welcome to Game Zone!")
+    //     if (confirm("Do you want to play? ")){
+    //     var n = prompt("Enter your name: ")
+    //     alert(n+"! now you're part of out game  ")
+    //     }
+        // var a = prompt("nhập chiều dài hình chữ nhật: ","0")
+        // var b = prompt("Nhập chiều rộng hình chữ nhật: ","0")
+        // // var c = a*b
+        // // alert("diện tích hình chữ nhật: "+c)
+        // document.getElementById("ketqua").innerHTML = ("Kết quả là :" +a*b)
+       
+    </script> -->
+</body>
+</html>
