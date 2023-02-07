@@ -2,29 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Traffic</title>
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+#button{
+    display: flex;
+    flex-direction: row;
+}
+.button {
+  background-color: gray;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: 90px 40px;
+  cursor: pointer;
+}
+
+#traffic-light {
+ 
+  height: 550px;
+  width: 200px;
+  float: left;
+  background-color: #333;
+  border-radius: 40px;
+  margin: 30px 0;
+  padding: 20px;
+}
+
+.bulb {
+  height: 150px;
+  width: 150px;
+  background-color: #111;
+  border-radius: 50%;
+  margin: 25px auto;
+
+}
+</style>
 </head>
 <body>
-    <div class="color-traffic">
-        <input type="button" name="" value="green" onclick="getGreenColor">
-        <input type="button" name="" value="yellow" onclick="getYellowColor">
-        <input type="button" name="" value="red" onclick="getRedColor">
+    <div id="button">
+        <h1 id="green" class="button">Green</h1>    
+        <h1 id="yellow" class="button">Yellow</h1>
+        <h1 id="red" class="button">Red</h1>
     </div>
-    <img src="./img/green.png" alt="" id="myImg">
-
+    <div id="traffic-light">
+        <div id="greenLight" class="bulb"></div>
+        <div id="yellowLight" class="bulb"></div>
+        <div id="redLight" class="bulb"></div>
+    </div>
     <script>
-        function getGreenColor(){
-            document.getElementById("myImg").src ="./img/ green.png"
-        }
+document.getElementById('green').onclick = LightGreen;
+document.getElementById('yellow').onclick = LightYellow;
+document.getElementById('red').onclick = LightRed;
 
-        function getYellowColor(){
-            document.getElementById("myImg").src ="./img/ yellow.png"
-        }
+function LightGreen() {
+  clearLights();
+  document.getElementById('greenLight').style.backgroundColor = "green";
+}
+function LightRed() {
+  clearLights();
+  document.getElementById('redLight').style.backgroundColor = "red";
+}
 
-        function getRedColor(){
-            document.getElementById("myImg").src ="./img/ red.png"
-        }
+function LightYellow() {
+  clearLights();
+  document.getElementById('yellowLight').style.backgroundColor = "yellow";
+}
+
+
+function clearLights() {
+document.getElementById('greenLight').style.backgroundColor = "black";
+document.getElementById('redLight').style.backgroundColor = "black";
+document.getElementById('yellowLight').style.backgroundColor = "black";
+  
+}
     </script>
 </body>
 </html>
