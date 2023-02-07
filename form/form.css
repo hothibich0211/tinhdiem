@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+    color: #353b48;
+}
+input[type=text]{
+    border: 3px solid rgb(188, 188, 205);
+    background-color: rgb(196, 183, 185);
+}
+input[type=submit]{
+    background-color: greenyellow;
+    margin-top: 150%;
+    border: 3px solid #6D214F;
+}
+select[name=choose] {
+    border: 3px solid palevioletred;
+    background-color:aqua;
+}
+
+textarea {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    border: 3px solid #2C3A47;
+}
