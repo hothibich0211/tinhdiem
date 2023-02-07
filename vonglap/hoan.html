@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #imageh{
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h4>SẢN PHẨM CỦA CHÚNG TÔI</h4>
+    <p>Đền 10 lần giá trị đơn hàng nếu không đúng da thật !</p>
+    
+    <script>
+        var ThoiTrang = [
+            {
+                imgage: "<img src='https://bizweb.dktcdn.net/thumb/large/100/430/435/products/staad-14-2000x.jpg?v=1628564369000' id='imageh'>",
+                title: "<p id='title '>Túi đựng Laptop BackPack</p>",
+                price: "<p id='price '>400.000Đ</p>"
+            },
+            {
+                imgage: "<img src='https://bizweb.dktcdn.net/thumb/large/100/430/435/products/that-lung-quan-jean-cao-cap-dj625-cf-2.jpg?v=1629269200000' id = 'imageh'>",
+                title: "<p id='title'>Túi đựng Laptop BackPack</p>",
+                price: "<p id='price'>400.000Đ</p>"
+            },
+            {
+                imgage: "<img src='https://bizweb.dktcdn.net/thumb/large/100/430/435/products/staad-14-2000x.jpg?v=1628564369000' id='imageh'>",
+                title: "<p id='title'>Túi đựng Laptop BackPack</p>",
+                price: "<p id='price'>400.000Đ</p>"
+            },
+            {
+                imgage: "<img src='https://bizweb.dktcdn.net/thumb/large/100/430/435/products/staad-14-2000x.jpg?v=1628564369000' id='imageh'>",
+                title: "<p id='title'>Túi đựng Laptop BackPack</p>",
+                price: "<p id='price'>400.000Đ</p>"
+            }
+        ]
+        
+           for(var z = 0 ; z <ThoiTrang.length; z++){
+                for(var i = 0; i <ThoiTrang.length;i++){
+                document.write(ThoiTrang[z].imgage);
+                break;
+                }
+                for(var i = 0; i <ThoiTrang.length;i++){
+                    document.write(ThoiTrang[z].title);
+                    break;
+                }
+                for(var i = 0; i <ThoiTrang.length;i++){
+                    document.write(ThoiTrang[z].price);
+                    break;
+                }
+            }
+          
+        
+    </script>
+</body>
+</html>

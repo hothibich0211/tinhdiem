@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 150px;
+            height: 100px;
+        }
+        .title1{
+            margin-left: 40px;
+        }
+        .price1{
+            margin-left: 35px;
+        }
+        .box-img2{
+            position: absolute;
+            margin-top: -189px;
+            margin-left: 200px;
+        }
+        .title2 {
+            position: absolute;
+            margin-top: -85px;
+            margin-left: 240px;
+        }
+        .price2{
+            position: absolute;
+            margin-top: -50px;
+            margin-left: 238px;
+        }
+
+        .box-img3 {
+            position: absolute;
+            margin-top: -189px;
+            margin-left: 400px;
+        }
+        .title3{
+            position: absolute;
+            margin-top: -85px;
+            margin-left: 425px;
+        }
+        .price3{
+            position: absolute;
+            margin-top: -50px;
+            margin-left: 440px;
+        }
+
+        .box-img4 {
+            position: absolute;
+            margin-top: -189px;
+            margin-left: 400px;
+        }
+        .title4{
+            position: absolute;
+            margin-top: -85px;
+            margin-left: 425px;
+        }
+        .price4{
+            position: absolute;
+            margin-top: -50px;
+            margin-left: 440px;
+        }
+    </style>
+</head>
+<body>
+    
+        <script>
+            var ThoiTrang = [
+                {
+                    image: "<div class='box-img1'><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuqmRBdt85La5Di2_TJ-lzd7OgFnjaFaE1pZXuO3nj&s' id='img'></div>",
+                    title: "<div class='title1'><p>Mèo Con</p></div>",
+                    price: "<div class='price1'><p>300.000Đ</p></div>"
+                },
+                {
+                    image: "<div class='box-img2'><img src='https://img.meta.com.vn/Data/image/2021/09/20/anh-meo-che-anh-meo-bua-15.jpg' id='img'></div>",
+                    title: "<div class='title2'><p>Mèo Lớn</p></div>",
+                    price: "<div class='price2'><p>200.000Đ</p></div>"
+                },
+                {
+                    image: "<div class='box-img3'><img src='https://sieupet.com/sites/default/files/hinh_anh_meo_dep4.jpg' id='img'></div>",
+                    title: "<div class='title3'><p>Mèo Con Cute</p></div>",
+                    price: "<div class='price3'><p>500.000Đ</p></div>"
+                },
+                {
+                    image: "<div class='box-img3'><img src='https://sieupet.com/sites/default/files/hinh_anh_meo_dep4.jpg' id='img'></div>",
+                    title: "<div class='title3'><p>Mèo Con Cute</p></div>",
+                    price: "<div class='price3'><p>500.000Đ</p></div>"
+                }
+            ]
+
+            for (z in ThoiTrang){
+                for(i in ThoiTrang){
+                    document.write(ThoiTrang[z].image);
+                    break;
+                }
+                for(i in ThoiTrang){
+                    document.write(ThoiTrang[z].title);
+                    break;
+                }
+                for(i in ThoiTrang){
+                    document.write(ThoiTrang[z].price);
+                    break;
+                }
+                for(i in ThoiTrang){
+                    document.write(ThoiTrang[z].price);
+                    break;
+                }
+            }
+        </script>
+</body>
+</html>

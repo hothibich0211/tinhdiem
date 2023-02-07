@@ -4,67 +4,192 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Menu/css.css">
     <title>Menu</title>
 </head>
 <body>
-    <form>
+  
         <h3>MENU</h3>
         <p>Hãy Ghé Vào Đây </p> 
-        <p>Quý Khách Vui Lòng Chọn:</p>
-        Nước Ngọt:
-        <select id="sweet_drink"> </br> </br>
-            <option value="nuocsuoi">Stream Drink</option>
-            <option value="nuoccam">Orange Drink</option>
-            <option value="sting">Sting Drink</option>
-            <option value="pepsi">Pepsi Drink</option>
-            <option value="coca">CoCa Drink</option>
-            <option value="7up">7Up Drink</option>
-        </select>
-        Trái Cây:
-        <select id="fruit"> Trái Cây </br> </br>
-            <option value="grape">Grape</option>
-            <option value="orange">Orange</option>
-            <option value="grapefruit">Grapefruit</option>
-            <option value="coconut">Coconut</option>
-        </select>
-        </br> </br>
-        Số Tiền: 
-        <input type="number" id="money">  </br> </br>
-        <input type="button" onclick="functionOK()" value="Thanh Toán"> </br> </br>
-        <div> </br>
-            <button id="myBtn">Chúc Quý Khách Ngon Miệng</button>  </br> </br>
-            Tiền Còn Lại:
-            <input type="text" id="sum" value="">
-        </div>
-        <!-- <p id="demo"></p> -->
-    </form>
-    <script>
-       function functionOK(){
-            var drink=document.getElementById("sweet_drink");
-            var valuedrink=drink[drink.selectedIndex].value;
-            var Fruit=document.getElementById("fruit");
-            var valuefruit=Fruit[Fruit.selectedIndex].value;
-            var ketqua;
-            var tiennuoc;
-            var tientraicay;
-            switch(valuedrink){
-                case "nuocsuoi":tiennuoc=15000;
-                case "nuoccam":tiennuoc=20000;
-                case "sting":tiennuoc=15000;
-                case "pepsi":tiennuoc=10000;
-                case "coca":tiennuoc=5000;
-                case "7up":tiennuoc=10000;
-            }
-            switch(valuefruit){
-                case "grape":tientraicay=30000;
-                case "orange":tientraicay=15000;
-                case "grapefruit":tientraicay=20000;
-                case "coconut":tientraicay=10000;
-            }
-            if ()
+        <p>Quý Khách Vui Lòng Chọn:</p> <select name="" id="Choose">
+                                                            <option value="">Mời bạn chọn</option>
+                                                            <option value="">Trái cây</option>
+                                                            <option value="">Nước </option>
+                                                            <option value="">Cả hai</option>
+                                                                    </select> <br><br>
+        <button onclick="Ok()">Ok</button>    
+        <br>
+        <br>
 
-       }
-    </script>
+        <form id="Form_waeter">
+            Nước Ngọt:
+            <select id="sweet_drink"> </br> </br>
+                <option value="nuocsuoi">Nước lọc</option>
+                <option value="nuoccam">Nước Sting</option>
+                <option value="sting">Nước Pepsi</option>
+                <option value="pepsi">Nước Cola</option>
+                <option value="coca">Nước Compact</option>
+                <option value="7up">Nước 7Up</option>
+            </select>
+            <br>
+            <br>
+            <div id="pay">
+            Số Tiền: 
+            <input type="number" id="money">  </br> </br>
+            <input type="button" onclick="functionOK()" value="Thanh_Toán"> 
+            </div></br> </br>
+            
+            <div id="Return-1"> </br>
+                <button id="myBtn">Chúc Quý Khách Ngon Miệng</button>  </br> </br>
+                Tiền Còn Lại:
+                <input type="text" id="sum" value=""> <br> <br>
+            </div>
+        </form>
+
+        <form id="Form-fruid">
+            Trái Cây:
+            <select id="fruit"> Trái Cây </br> </br>
+                <option value="grape">Trái cây nhỏ</option>
+                <option value="orange">Trái cây lớn</option>
+                <option value="grapefruit">Grapefruit</option>
+                <option value="coconut">Bưởi</option>
+            </select>
+            </br> </br>
+            <div id="bich">
+            Số Tiền: 
+            <input type="number" id="tien">  </br> </br>
+            <input type="button" onclick="functionOKK()" value="Thanh_Toán">
+            </div>
+            </br> </br>
+            <div id="Return-2"> </br>
+                <button id="myBtn">Chúc Quý Khách Ngon Miệng</button>  </br> </br>
+                Tiền Còn Lại:
+                <input type="text" id="summ" value="">
+            </div>
+        <!-- <p id="demo"></p> -->
+         </form>
+  
 </body>
+<script>
+      var nuoc=document.getElementById("Form_waeter");
+      var trai_cay=document.getElementById("Form-fruid");
+       nuoc.style.display=("none");
+       trai_cay.style.display=("none")
+       var price=document.getElementById("money");
+       var tra_gia=document.getElementById("pay");
+       function Ok(){
+       var chon=document.getElementById("Choose");
+       var lua_chon=chon.options[chon.selectedIndex].text;
+       var comment=document.getElementById("Return-2");
+       var binh_luan=document.getElementById("Return-1")
+      
+
+            if(lua_chon=="Trái cây"){
+                trai_cay.style.display=("block");
+                comment.style.display=("none");
+                nuoc.style.display=("none");
+            }else if(lua_chon=="Nước"){
+                nuoc.style.display=("block");
+                binh_luan.style.display=("none");
+                trai_cay.style.display=("none");
+            }else{
+                trai_cay.style.display=("block");
+                price.style.display=("none");
+                tra_gia.style.display=("none");
+                nuoc.style.display=("block");
+                comment.style.display=("none");
+                binh_luan.style.display=("none");
+            }
+       }
+       function functionOK(){
+        var binh_luan=document.getElementById("Return-1")
+        var nuoc_ngot=document.getElementById("sweet_drink");
+        var lay_nuoc=nuoc_ngot.options[nuoc_ngot.selectedIndex].text;
+        var price=document.getElementById("money").value;
+        var sum=document.getElementById("sum");
+        switch (lay_nuoc) {
+            case "Nước lọc":
+               
+                if(price<15000){
+                    alert("Bạn không đủ tiền")
+                }else{
+                    binh_luan.style.display=("block");
+                    sum=price-15000;
+                    document.getElementById("sum").value=sum;
+                }
+               
+                break;
+                case "Nước Sting":
+                case "Nước Pepsi":
+                case "Nước Cola":
+                case "Nước Compact":
+                if(price<17000){
+                    alert("Bạn không đủ tiền")
+                }else{
+                    binh_luan.style.display=("block");
+                    sum=price-17000;
+                    document.getElementById("sum").value=sum;
+                }
+                break;
+                case "Nước 7Up":
+                if(price<25000){
+                    alert("Bạn không đủ tiền")
+                }else{
+                    binh_luan.style.display=("block");
+                    sum=price-25000;
+                    document.getElementById("sum").value=sum;
+                }
+                break;
+            default:
+                break;
+        }
+       }
+
+       function functionOKK(){
+        var comment=document.getElementById("Return-2");
+        var nuoc_trcay=document.getElementById("fruit");
+        var lay_trcay=nuoc_trcay.options[nuoc_trcay.selectedIndex].text;
+        var price=document.getElementById("tien").value;
+        var sum=document.getElementById("summ");
+        switch (lay_trcay) {
+            case "Trái cây nhỏ":
+                if(price<150000){
+                        alert("Bạn không đủ tiền")
+                    }else{
+                        comment.style.display=("block");
+                        sum=price-150000;
+                        document.getElementById("summ").value=sum;
+                    }
+                break;
+                case "Trái cây lớn":
+                if(price<150000){
+                    alert("Bạn không đủ tiền")
+                }else{
+                    comment.style.display=("block");
+                    sum=price-1540000;
+                    document.getElementById("summ").value=sum;
+                }
+                break;
+                case "Grapefruit":
+                if(price<150000){
+                    alert("Bạn không đủ tiền")
+                }else{
+                    comment.style.display=("block");
+                    sum=price-1590000;
+                    document.getElementById("summ").value=sum;
+                }
+                break;
+                case "Bưởi":
+                if(price<1750000){
+                    alert("Bạn không đủ tiền")
+                }else{
+                    comment.style.display=("block");
+                    sum=price-1750000;
+                    document.getElementById("summ").value=sum;
+                }
+                break;
+            default:
+                break;
+        }
+       }
+</script>
 </html>

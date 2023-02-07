@@ -1,30 +1,151 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Count Score</title>
-    <script src ="java/bt.js"></script>
-    <link rel="stylesheet" href="./style/style.css">
+    <title>Thời Trang</title>
+    <style>
+
+        *{
+            background-color:#e4d9c6;
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        img{
+            width: 250px;
+            height: 200px;
+            padding-bottom: 50%;
+            background-color: white;
+           
+        }
+        .boximg1{
+            position: absolute;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+        .title1{
+            position: absolute;
+            margin-top:  310px;
+            margin-left: 130px;
+            background-color: white;
+
+        }
+        .price1{
+            position: absolute;
+            margin-top: 370px;
+            margin-left: 190px;
+            background-color: white;
+            color: red;
+        }
+        .boximg2{
+            position: absolute;
+            margin-top: 100px;
+            margin-left: 380px;
+            
+        }
+        .title2 {
+            position: absolute;
+            margin-top:  310px;
+            margin-left: 400px;
+            background-color: white;
+        }
+        .price2{
+            position: absolute;
+            margin-top: 370px;
+            margin-left: 460px;
+            background-color: white;
+            color: red;
+        }
+
+        .boximg3 {
+            position: absolute;
+            margin-top: 100px;
+            margin-left: 660px;
+        }
+        .title3{
+            position: absolute;
+            margin-top:  310px;
+            margin-left: 695px;
+            background-color: white;
+        }
+        .price3{
+            position: absolute;
+            margin-top: 370px;
+            margin-left: 750px;
+            background-color: white;
+            color: red;
+        }
+        .boximg4{
+            position: absolute;
+            margin-top: 102px;
+            margin-left: 940px;
+        }
+        .title4{
+            position: absolute;
+            margin-top: 310px;
+            margin-left: 965px;
+            background-color: white;
+        }
+        .price4{
+            position: absolute;
+            margin-top: 370px;
+            margin-left: 1040px;
+            background-color: white;
+            color: red;
+        }
+
+    </style>
 </head>
 <body>
-    <form class="wap">
-        <h3>Bang Diem Cua Em</h3> <br>
-        Semester 1:
-        <input type="number" id="s1"> </input> <br> <br>
-        Semester 2:
-        <input type="number" id="s2"> </input> <br> <br>
-        Year:
-        <select name="" id='year'>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-        </select> <br> <br>
-        Summary :
-        <input type="text" id="sum" value=""></input> <br> <br> 
-        <input type="button" onclick="functionOK()" value="OK">
-        <input type="button" onclick="functionCancle()" value="Cancle"></input>
-    </form>
+    <br><br>
+    <h1><b>SẢN PHẨM CỦA CHÚNG TÔI</b> </h1>
+    <p>Đền 10 Lần giá trị đơn hàng nếu không đúng da thật</p>
+    
+        <script>
+            var Fashion = [
+                {
+                    image: "<div class='boximg1'><img src= '/img/balo.webp' id='img'></div>",
+                    title: "<div class='title1'><p>Túi đựng Laptop BackPack</p></div>",
+                    price: "<div class='price1'><p>400.000Đ</p></div>"
+                },
+                {
+                    image: "<div class='boximg2'><img src='/img/thatlung.webp' id='img'></div>",
+                    title: "<div class='title2'><p>Thắt lưng quần jean mặt khóa <br> xỏ kim DJ625-CF</p></div>",
+                    price: "<div class='price2'><p>180.000Đ</p></div>"
+                },
+                {
+                    image: "<div class='boximg3'><img src='/img/vi.webp' id='img'></div>",
+                    title: "<div class='title3'><p>Ví nam dáng ngang cổ điển <br> VNTAN-31N</p></div>",
+                    price: "<div class='price3'><p>430.000Đ</p></div>"
+                },
+
+                {
+                    image: "<div class='boximg4'><img src='/img/giay.webp' id='img'></div>",
+                    title: "<div class='title4'><p>Giày tây nam buộc dây vân da <br> GNTA2695-N</p></div>",
+                    price: "<div class='price4'><p>900.000Đ</p></div>"
+                }
+            ]
+
+            for (j in Fashion){
+                for(i in Fashion){
+                    document.write(Fashion[j].image);
+                    break;
+                }
+                for(i in Fashion){
+                    document.write(Fashion[j].title);
+                    break;
+                }
+                for(i in Fashion){
+                    document.write(Fashion[j].price);
+                    break;
+                }
+
+            }
+        </script>
 </body>
 </html>

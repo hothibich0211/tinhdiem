@@ -1,0 +1,128 @@
+<!DOCTYPE html>	
+<html lang="en">	
+	
+<head>	
+<title>Store</title>	
+	
+<meta charset="UTF-8">	
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
+<link rel="stylesheet" href="css/style.css">	
+<!-- <script src="./data.js"></script> -->
+<script src="modal.js">	
+</script>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>	
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>	
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">	
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">	
+<div id="fb-root"></div>	
+</head>	
+	
+<body>	
+<div class="container-fluild mt-5 md-5 ">	
+<div class="container">	
+<div class="h3 mb5">Sản phẩm bán chạy</div>	
+<div class="row" id="banchay"></div>	
+</div>	
+</div>	
+<br>
+<script>	
+    listLocal();	
+</script>
+
+<!-- <div class="container">
+    
+	<div class="row">
+		<div class="col-sm-3">
+			<img src="https://sofiabridal.vn/wp-content/uploads/2020/07/20-511x800.jpg "alt="" style="height: 400px;">
+		</div>
+		<div class="col-sm-3">
+			<img src="https://sofiabridal.vn/wp-content/uploads/2020/07/20-511x800.jpg "alt="" style="height: 400px;">
+		</div>
+		<div class="col-sm-3">
+			<img src="https://sofiabridal.vn/wp-content/uploads/2020/07/20-511x800.jpg "alt="" style="height: 400px;">
+		</div>
+		<div class="col-sm-3">
+			<img src="https://sofiabridal.vn/wp-content/uploads/2020/07/20-511x800.jpg "alt="" style="height: 400px;">
+		</div>
+	  </div>
+	  <br>
+
+	  <div class="row">
+		<div class="col-sm-3">
+			<img src="https://sofiabridal.vn/wp-content/uploads/2020/07/20-511x800.jpg "alt="" style="height: 400px;">
+		</div>
+		<div class="col-sm-3">
+			<img src="https://sofiabridal.vn/wp-content/uploads/2020/07/20-511x800.jpg "alt="" style="height: 400px;">
+		</div>
+		<div class="col-sm-3">
+			<img src="https://sofiabridal.vn/wp-content/uploads/2020/07/20-511x800.jpg "alt="" style="height: 400px;">
+		</div>
+		<div class="col-sm-3">
+			<img src="https://sofiabridal.vn/wp-content/uploads/2020/07/20-511x800.jpg "alt="" style="height: 400px;">
+		</div>
+	  </div>
+	  <br> -->
+	  <h2>Thêm sản phẩm</h2>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Thêm</button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Thêm sản phẩm</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+              <form action="">
+                  Thêm sản phẩm: 
+                  <br>
+                  <br>
+                  <input type="text" name="Name" id="name" value="" placeholder="Name">
+                  <br>
+                  <br>
+                  <input type="text" name="img" value="" id="img" placeholder="Image">
+                  <br>
+                  <br>
+                  <input type="text" name="price" value="" id="price" placeholder="Price">
+                  <br>
+                  <br>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Thêm</button>
+  
+            <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+	<div border="1" 1px solid>
+		<table style="height: 10px; width: 100px;" id="table">
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Img</th>
+				<th>Price</th>
+				<th>Action</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+		</table>
+	</div>
+  </div>
+ 
+</body>	
+	
+</html>
