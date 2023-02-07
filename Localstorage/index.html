@@ -92,7 +92,7 @@ var input_infor=input_class.querySelectorAll(".Infor_input")
             }
         }
     }
-    var array=localStorage.getItem("luc")?JSON.parse(localStorage.getItem("luc")):[]
+    var array=localStorage.getItem("product")?JSON.parse(localStorage.getItem("luc")):[]
     function save(){
        
        ckeck_erro()
@@ -111,7 +111,7 @@ var input_infor=input_class.querySelectorAll(".Infor_input")
        }
        if(n_pro!=""&& i_pro!=""&& na_pro!=""&&q_pro!=""&&p_pro!=""){
         array.push(mang)
-        localStorage.setItem("luc", JSON.stringify(array))
+        localStorage.setItem("product", JSON.stringify(array))
        }
       
        Reset()
@@ -119,7 +119,7 @@ var input_infor=input_class.querySelectorAll(".Infor_input")
     }
 
     function Show(){
-        var array=localStorage.getItem("luc")?JSON.parse(localStorage.getItem("luc")):[]
+        var array=localStorage.getItem("product")?JSON.parse(localStorage.getItem("luc")):[]
         table=`
         <tr>
             <th>STT</th>
@@ -163,7 +163,7 @@ var input_infor=input_class.querySelectorAll(".Infor_input")
        var p_pro=document.getElementById("Pri_pro").value=""
   }
 function sua(index){
-    var array=localStorage.getItem("luc")?JSON.parse(localStorage.getItem("luc")):[]
+    var array=localStorage.getItem("product")?JSON.parse(localStorage.getItem("luc")):[]
     var index=document.getElementById("idex").value=index
     document.getElementById("You_Name").value=array[index].n
     document.getElementById("Id_pro").value=array[index].i
@@ -172,7 +172,7 @@ function sua(index){
     document.getElementById("Pri_pro").value=array[index].p
 }
 function them(){
-    var array=localStorage.getItem("luc")?JSON.parse(localStorage.getItem("luc")):[]
+    var array=localStorage.getItem("product")?JSON.parse(localStorage.getItem("luc")):[]
     var inde=document.getElementById("idex").value
 
     array[inde]={
@@ -182,14 +182,14 @@ function them(){
         q:document.getElementById("Quan_pro").value,
         p:document.getElementById("Pri_pro").value
     }
-    localStorage.setItem("luc",JSON.stringify(array))
+    localStorage.setItem("product",JSON.stringify(array))
     Show()
 }
 
 function xoa(index){
-    var array=localStorage.getItem("luc")?JSON.parse(localStorage.getItem("luc")):[];
+    var array=localStorage.getItem("product")?JSON.parse(localStorage.getItem("luc")):[];
     array.splice(index,1);
-    localStorage.setItem("luc", JSON.stringify(array));
+    localStorage.setItem("product", JSON.stringify(array));
     window.location.reload();
     
 }
